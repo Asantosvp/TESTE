@@ -1,3 +1,5 @@
+/* QUESTÃO 1 */
+
 /*1) Observe o trecho de código abaixo:
 int INDICE = 13, SOMA = 0, K = 0;
 enquanto K < INDICE faça
@@ -19,6 +21,9 @@ while (k < indice) {
 
 console.log(soma);
 
+
+/* QUESTÃO 2 */
+
 /*2) Dado a sequência de Fibonacci, onde se inicia por 0 e 1 e o próximo valor sempre será a soma dos 2 valores anteriores (exemplo: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...), escreva um programa na linguagem que desejar onde, informado um número, ele calcule a sequência de Fibonacci e retorne uma mensagem avisando se o número informado pertence ou não a sequência.
 IMPORTANTE:
 Esse número pode ser informado através de qualquer entrada de sua preferência ou pode ser previamente definido no código;
@@ -34,23 +39,20 @@ function verificaSequenciaFibonacci(numero) {
     let atual = 1;
     let proximo;
 
-    // Gera a sequência de Fibonacci até encontrar um número maior que o número informado
     while (atual <= numero) {
         proximo = anterior + atual;
         anterior = atual;
         atual = proximo;
 
-        // Verifica se o número informado está na sequência
         if (atual === numero) {
             return true;
         }
     }
 
-    // Se o número não for encontrado na sequência, retorna false
     return false;
 }
 
-// Exemplo de uso da função
+
 const numeroInformado = 21;
 if (verificaSequenciaFibonacci(numeroInformado)) {
     console.log(`${numeroInformado} pertence à sequência de Fibonacci.`);
@@ -73,9 +75,10 @@ if (verificaSequenciaFibonacci(numeroInformado)) {
 
 // f) 2,10, 12, 16, 17, 18, 19, 20
 
+
+
 /* QUESTÃO 4 */
 
-// Para resolver esse problema com apenas duas idas à sala das lâmpadas, você pode seguir o seguinte procedimento:
 
 // Na primeira ida, ligue um interruptor e mantenha os outros dois desligados por alguns minutos. Então, desligue o interruptor que você ligou e ligue um dos outros dois interruptores. Deixe os interruptores ligados por um tempo.
 
@@ -84,8 +87,9 @@ if (verificaSequenciaFibonacci(numeroInformado)) {
 // Se a lâmpada estiver acesa, então o interruptor que você ligou na primeira vez está conectado a essa lâmpada.
 // Se a lâmpada estiver desligada e estiver fria, então o interruptor que você não tocou está conectado a essa lâmpada.
 // Se a lâmpada estiver desligada, mas ainda estiver quente, então o interruptor que você ligou na segunda vez está conectado a essa lâmpada.
-// Dessa forma, com apenas duas idas à sala das lâmpadas, você pode determinar qual interruptor controla cada lâmpada.
 
+
+/* QUESTÃO 5 */
 function inverteString(str) {
     let invertedString = '';
     for (let i = str.length - 1; i >= 0; i--) {
@@ -94,7 +98,7 @@ function inverteString(str) {
     return invertedString;
 }
 
-// Exemplo de uso da função
+
 const stringOriginal = "Olá, mundo!";
 const stringInvertida = inverteString(stringOriginal);
 console.log("String original:", stringOriginal);
